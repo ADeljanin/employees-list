@@ -1,0 +1,26 @@
+:host {
+  margin: auto;
+}
+
+img {
+  width: 60%;
+  height: fit-content;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px rgba(43, 198, 97, 0.2);
+}
+
+.user-data-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 2rem;
+}
+
+ul span {
+  color: cadetblue;
+  font-size: 2.3rem;
+}

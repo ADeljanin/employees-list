@@ -1,0 +1,29 @@
+<div>
+  <h2>Employees list</h2>
+  <input class="search-term" name="searchTerm" type="text" id="search" placeholder="🔎 Filter by name..."
+    [(ngModel)]="searchTerm" (input)="search(searchTerm)" />
+
+
+  <table *ngIf="filteredUsers && filteredUsers.length; else noDataBlock" class="employee-table">
+    <thead>
+      <tr>
+        <th>Full name</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of filteredUsers" routerLink="{{ user.id }}/details">
+        <td>{{ user.name }}</td>
+        <td>{{ user.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noDataBlock>
+    <div class="no-search-result-container">
+      No search result
+    </div>
+
+  </ng-template>
+</div>
