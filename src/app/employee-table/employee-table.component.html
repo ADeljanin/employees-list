@@ -1,10 +1,19 @@
 <div>
   <h2>Employees list</h2>
-  <input class="search-term" name="searchTerm" type="text" id="search" placeholder="🔎 Filter by name..."
-    [(ngModel)]="searchTerm" (input)="search(searchTerm)" />
+  <input
+    class="search-term"
+    name="searchTerm"
+    type="text"
+    id="search"
+    placeholder="🔎 Filter by name..."
+    [(ngModel)]="searchTerm"
+    (input)="search(searchTerm)"
+  />
 
-
-  <table *ngIf="filteredUsers && filteredUsers.length; else noDataBlock" class="employee-table">
+  <table
+    *ngIf="filteredUsers && filteredUsers.length; else noDataBlock"
+    class="employee-table"
+  >
     <thead>
       <tr>
         <th>Full name</th>
@@ -21,9 +30,6 @@
   </table>
 
   <ng-template #noDataBlock>
-    <div class="no-search-result-container">
-      No search result
-    </div>
-
+    <div class="no-search-result-container">No search result</div>
   </ng-template>
 </div>
